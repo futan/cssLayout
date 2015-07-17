@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>全屏布局</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<style type="text/css">
+	html,body,.parent{margin:0;height:100%;overflow:hidden;}
+	body{color:white;}
+	.top{
+		position:absolute;top:0;left:0;right:0;height:100px;
+		background:blue;
+	}
+	.left{
+		position:absolute;left:0;top:100px;bottom:50px;width:200px;
+		background:red;
+	}
+	.right{
+		position:absolute;left:200px;top:100px;bottom:50px;right:0;
+		background:pink;overflow: auto;
+	}
+	.right .inner{min-height: 1000px;}
+	.bottom{
+		position:absolute;left:0;right:0;bottom:0;height:50px;
+		background: black;
+	}
+</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="top">top</div>
+		<div class="left">left</div>
+		<div class="right"><div class="inner">right</div></div>
+		<div class="bottom">bottom</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>多列布局</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<style type="text/css">
+	body{margin:20px;}
+	p{background: none!important;}
+	.left,.right{background: #444;}
+	.parent{
+		overflow: hidden;
+	}
+	.left,.right{
+		padding-bottom: 9999px;
+		margin-bottom: -9999px;
+	}
+	.left{
+		float: left; width: 100px;
+		margin-right: 20px;
+	}
+	.right{
+		overflow: hidden;
+	}
+
+</style>
+</head>
+<body>
+<div class="parent">
+	<div class="left">
+		<p>left</p>
+	</div>
+	<div class="right">
+		<p>right</p>
+		<p>right</p>
+	</div>
+</div>
+</body>
+</html>

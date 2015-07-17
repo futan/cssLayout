@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.1多列布局</title>
+    <link rel="stylesheet" href="./css/reset.style.css">
+    <style>
+        .left{
+            background:#ddd;
+            float: left;
+            width: 100px;
+        }
+        .right {
+            background:#666;
+            color:#fff;
+            margin-left: 120px;
+        }
+        /*
+        p {
+            clear: both;
+        }*/
+    </style>
+</head>
+<body>
+    <!-- 兼容性有点问题 IE6需要HACK -->
+    <div class="left">
+        <p>left</p>
+    </div>
+    <div class="right">
+        <!-- 子元素加上clear : both; 之后会塌陷 -->
+        <p>right</p>
+        <p>right</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.1多列布局(改进方案)</title>
+    <link rel="stylesheet" href="./css/reset.style.css">
+    <style>
+        .left{
+            background:#ddd;
+            float: left;
+            width: 100px;
+            position: relative;
+        }
+        .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -100px;
+        }
+        .right {
+            background:#666;
+            color:#fff;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <p>left</p>
+    </div>
+    <div class="right-fix">
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+            <p>right</p>
+            <p>right</p>
+        </div>
+    </div>
+</body>
+</html>

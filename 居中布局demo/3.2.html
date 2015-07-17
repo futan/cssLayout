@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>居中</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<style type="text/css">
+	body{margin:20px;}
+	.parent{width:200px;height:300px;}
+	
+	.parent{
+		position: relative;
+	}
+	.child{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+</style>
+</head>
+<body>
+<div class="parent">
+	<div class="child">DEMO</div>
+</div>
+</body>
+</html>

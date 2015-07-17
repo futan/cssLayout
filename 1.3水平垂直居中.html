@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中布局-1.3水平垂直居中</title>
+    <link rel="stylesheet" href="./css/reset.style.css">
+    <style>
+        .parent {
+            background:#ddd;
+            margin: 20px;
+            height: 300px;
+            width: 960px;
+        }
+        .child {
+            background:#666;color:#fff;
+        }
+
+        .tvParent {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .tvChild {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .atParent {
+            position: relative;
+        }
+        .atChild {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .fjParent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- inline-block + text-align + table-cell + vertical-align -->
+    <!--  优势：兼容性好  -->
+    <div class="tvParent parent">
+        <div class="tvChild child">
+            <p>inline-block + text-align + table-cell + vertical-align</p>
+            <p>Try inline-block + text-align + table-cell + vertical-align!Try inline-block + text-align + table-cell + vertical-align!</p>
+        </div>
+    </div>
+    <!-- absolute + transform -->
+    <div class="atParent parent">
+        <div class="atChild child">
+            <p>absolute + transform</p>
+            <p>Try absolute + transform!Try absolute + transform!Try absolute + transform!</p>
+        </div>
+    </div>
+
+    <!-- flex + justify-content + align-items -->
+    <div class="fjParent parent">
+        <div class="fjChild child">
+            <p>flex + justify-content + align-items</p>
+            <p>Try flex + justify-content + align-items!Try flex + justify-content + align-items!Try flex + justify-content + align-items!</p>
+        </div>
+    </div>
+</body>
+</html>

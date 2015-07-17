@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中布局-1.2垂直居中</title>
+    <link rel="stylesheet" href="./css/reset.style.css">
+    <style>
+        .parent {
+            background:#ddd;
+            margin: 10px auto;
+            height: 300px;
+        }
+        .child {
+            background:#666;color:#fff;
+        }
+
+        .tvParent {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .atParent {
+            position: relative;
+        }
+        .atChild {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .faParent {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- table-cell + vertical-align -->
+    <!--  优势：兼容性好  -->
+    <div class="tvParent parent">
+        <div class="tvChild child">
+            <p>DEMO</p>
+            <p>Try tvParent parent!Try tvParent parent!</p>
+        </div>
+    </div>
+
+    <!-- absolute + transform -->
+    <div class="atParent parent">
+        <div class="atChild child">
+            <p>DEMO</p>
+            <p>Try atParent parent!Try atParent parent!</p>
+        </div>
+    </div>
+
+    <!-- flex + align-items -->
+    <div class="faParent parent">
+        <div class="faChild child">
+            <p>DEMO</p>
+            <p>Try faParent parent!Try faParent parent!</p>
+        </div>
+    </div>
+</body>
+</html>
