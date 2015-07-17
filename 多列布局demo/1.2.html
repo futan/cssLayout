@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>多列布局</title>
+<link rel="stylesheet" type="text/css" href="demo.css">
+<style type="text/css">
+	body{margin:20px;}
+	
+	.parent{
+		
+	}
+	.left{
+		float: left; width: 100px;
+		position: relative;
+	}
+	.right-fix{
+		float: right; width: 100%;
+		margin-left: -100px;
+	}
+	.right{
+		margin-left: 120px;
+	}
+</style>
+</head>
+<body>
+<div class="parent">
+	<div class="left"><p>left</p></div>
+	<div class="right-fix">
+		<div class="right">
+			<p>right</p><p>right</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

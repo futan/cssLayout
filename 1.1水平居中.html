@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>居中布局-1.1水平居中</title>
+    <link rel="stylesheet" href="./css/reset.style.css">
+    <style>
+        .parent {
+            background:#ddd;
+            margin: 10px auto;
+        }
+        .child {
+            background:#666;color:#fff;
+        }
+
+        /*不支持IE6*/
+        .itParent {
+            text-align: center;
+        }
+        .itChild {
+            display: inline-block;
+            text-align: left;
+
+        }
+
+        /*不支持IE6\7*/
+        .tableChild {
+            display: table;
+            margin: 0 auto;
+        }
+
+        /*不支持IE6\7\8*/
+        .abParent {
+            position: relative;
+            height: 2em;      /*必须定义高度*/
+        }
+        .abChild {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /*不支持IE6\7\8*/
+        .fjParent {
+            display: flex;
+            justify-content: center;
+        }
+        /* justify-content 也可以换成 */
+        .fjChild {
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- inline-block + text-align -->
+    <!--  优势：兼容性好  -->
+    <div class="itParent parent">
+        <div class="itChild child">
+            <p>DEMO</p>
+            <p>Try Text Align!Try Text Align!</p>
+        </div>
+    </div>
+
+    <!-- table + margin -->
+    <!--  优势： 兼容性好 -->
+    <div class="tableParent parent">
+        <div class="tableChild child">
+            <p>DEMO</p>
+            <p>Try Text Align!Try Text Align!</p>
+        </div>
+    </div>
+
+    <!-- absolute + transform -->
+    <!--  优势： 子元素脱离文档流 -->
+    <!--  劣势： 兼容性差 -->
+    <div class="abParent parent">
+        <div class="abChild child">
+            <p>DEMO</p>
+            <p>Try Text Align!Try Text Align!</p>
+        </div>
+    </div>
+
+    <!-- flex + justify-content -->
+    <!--  劣势： 兼容性差 -->
+    <div class="fjParent parent">
+        <div class="fjChild child">
+            <p>DEMO</p>
+            <p>Try Text Align!Try Text Align!</p>
+        </div>
+    </div>
+</body>
+</html>
